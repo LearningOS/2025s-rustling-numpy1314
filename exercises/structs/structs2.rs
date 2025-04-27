@@ -5,7 +5,7 @@
 // Execute `rustlings hint structs2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+
 
 #[derive(Debug)]
 struct Order {
@@ -37,6 +37,12 @@ mod tests {
     #[test]
     fn your_order() {
         let order_template = create_order_template();
+        // 使用结构体更新语法创建your_order，修改name和count字段
+        let your_order = Order {
+            name: String::from("Hacker in Rust"),
+            count: 1,
+            ..order_template
+        };
         // TODO: Create your own order using the update syntax and template above!
         // let your_order =
         assert_eq!(your_order.name, "Hacker in Rust");
